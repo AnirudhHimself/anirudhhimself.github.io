@@ -2,4 +2,6 @@ header {
   font-family: monospace;
   font-size: 36px;
   text-align: center;
+  width: 300px;
+  background-color: #28A3CC;
 }
