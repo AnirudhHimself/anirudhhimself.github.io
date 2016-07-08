@@ -1,11 +1,18 @@
 header {
-  font-family: monospace;
   font-size: 36px;
   text-align: center;
-  background-color: #06B7F2;
 }
 
 .landing {
 	margin-top: 15%;
 	text-align: center;
+}
+
+button:hover {
+  background-color: #3a3b3c;
+  color: white;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(.42, 0, .63, 1);
+  transition-delay: 0s;
 }
