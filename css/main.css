@@ -43,3 +43,7 @@ button:hover {
   display: inline-block;
   transform: rotate(30deg);
 }
+
+.material-icons {
+  text-rendering: optimizeLegibility;
+}
