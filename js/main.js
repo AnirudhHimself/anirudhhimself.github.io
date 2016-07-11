@@ -14,22 +14,29 @@
 })();
 
 (function() {
-  var canvas = document.getElementById('splash'),
-  context = canvas.getContext('2d');
-  // resize the canvas to fill browser window dynamically
-  window.addEventListener('resize', resizeCanvas, false);
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    /**
-     * Your drawings need to be inside this function otherwise they will be reset when
-     * you resize the browser window and the canvas goes will be cleared.
-     */
-    draw();
-  }
-  resizeCanvas();
-    function draw() {
-    // do your drawing stuff here
+  var c=document.getElementById("splash");
+  var ctx=c.getContext("2d");
+  ctx.beginPath();
+  //Draws a Circle
+  ctx.arc(100, 75, 50, 0, 2*Math.PI);
+  ctx.stroke();
+})();
+
+
+
+(function() {
+//  var canvas = document.querySelector('#splash'),
+//  context = canvas.getContext('2d');
+//  // Resizes Canvas to fill Browser Window
+//  window.addEventListener('resize', resizeCanvas, false);
+//  function resizeCanvas() {
+//    canvas.width = window.innerWidth;
+//    canvas.height = window.innerHeight;
+//    draw();
+//  }
+//  resizeCanvas();
+//    function draw() {
+    // Let's Go!
 
     }
   })();
