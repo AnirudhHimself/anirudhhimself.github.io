@@ -40,10 +40,10 @@ button:hover {
   position: fixed;
   top: 15px;
   right: 15px;
-  display: inline-block;
+  display: none;
   transform: rotate(30deg);
 }
 
 .material-icons {
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 }
