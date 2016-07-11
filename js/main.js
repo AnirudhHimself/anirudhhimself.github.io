@@ -1,17 +1,21 @@
 "use strict";
 
 // I'll finish this function later
-(function() {
-  var howMany = 0;
-  function() sayHello() {
-    howMany++;
-    var template = document.querySelector('template');
-    var clone = document.importNode(template.content, true);
-    for (int i = 0; i < howMany + 1) {
-      document.body.appendChild(clone);
-    }
-  }
-})();
+//(function() {
+//  var howMany = 0;
+//  function() sayHello() {
+//    howMany++;
+//    var template = document.querySelector('template');
+//    var clone = document.importNode(template.content, true);
+//    for (int i = 0; i < howMany + 1) {
+//      document.body.appendChild(clone);
+//    }
+//  }
+// })();
+
+function doNothing() {
+  alert("I don't do anything yet");
+}
 
 (function() {
   var c=document.getElementById("splash");

@@ -28,7 +28,18 @@ button:hover {
   margin: 0;
   padding: 0;
 }
+
 ::selection {
     color: white;
     background: #9370DB;
+}
+
+#setting {
+  font-size: 35px;
+  color: #3A3B3C;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  transform: rotate(30deg);
 }
