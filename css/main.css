@@ -43,8 +43,8 @@ button:hover {
   top: 15px;
   right: 15px;
   transform: rotate(30deg);
-}
-
-.material-icons {
-  text-rendering: geometricPrecision;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none;
 }
