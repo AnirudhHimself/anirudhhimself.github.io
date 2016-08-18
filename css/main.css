@@ -19,7 +19,7 @@ button:hover {
   background-color: #3A3B3C;
   color: white;
   transition-property: all;
-  transition-duration: 0.3s;
+  transition-duration: 0.54s;
   transition-timing-function: ease;
   transition-delay: 0s;
 }
@@ -44,7 +44,7 @@ button:hover {
   right: 15px;
   transform: rotate(30deg);
   -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ Booo */
   user-select: none;
 }

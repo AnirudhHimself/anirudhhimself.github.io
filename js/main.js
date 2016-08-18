@@ -1,3 +1,3 @@
-function() doNothing() {
-    alert("I don't do anything yet!");
-  }
+(function() {
+  // Add an event listner for clicking Settings icon
+})();
