@@ -1,9 +1,8 @@
 header {
-  font-size: 36px;
-  text-align: center;
+  margin: 2%;
 }
 img {
-  display: inline-block;
+  display: block;
 }
 .landing {
 	margin-top: 15%;
@@ -35,16 +34,26 @@ button:hover {
     color: white;
     background: #9370DB;
 }
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
 
 #setting {
-  font-size: 35px;
   color: #3A3B3C;
-  position: fixed;
-  top: 15px;
-  right: 15px;
+  /* top: 15px;
+  right: 15px */
   transform: rotate(30deg);
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE10+ Booo */
   user-select: none;
+  flex: 0 1 auto;
+  margin-left: auto;
+}
+
+#menu {
+  height: 1.5em;
+  color: black;
+  flex: 0 1 auto;
 }
