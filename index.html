@@ -19,20 +19,28 @@
       <header>
         <div class= "flex-container">
           <div class="flex-item">
-            <a href=''><img id="menu" alt="menu" src="assets/menu-icon.svg"></a>
+            <a><img id="menu-icon" onclick="openNav()" alt="menu" src="assets/menu-icon.svg"></a>
           </div>
           <div class="flex-item">
             <a href=''><img id="setting" alt="settings" src="assets/settings_24px.svg"></a>
           </div>
         </div>
+        <nav id="menu">
+            <a><img id="close-icon" onclick="closeNav()" alt="close" src="assets/close-button.svg"></a>
+            <a class="menu-btn">Danger</a>
+            <a class="menu-btn">Fake</a>
+            <a class="menu-btn">Data</a>
+            <a class="menu-btn">Cheese</a>
+        </nav>
       </header>
       <div class="landing container">
         <h1>Under Construction :)</h1>
-        <button onClick="doNothing();">I'm a happy Button</button>
+        <button onClick="doNothing()">I'm a happy Button</button>
       </div>
       <template>
         <h1>Hi There! Thanks for looking at the Source Code :-)</h1>
       </template>
+
       <!--Importing jQuery and JavaScript -->
       <script src="http://code.jquery.com/jquery-2.2.4.js"
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
@@ -40,5 +48,23 @@
       <script src="js/main.js"></script>
       <script src="js/Hammer.min.js"></script>
       <script src="js/Hammer-time.min.js"></script>
+      <script>
+        function openNav() {
+            document.getElementById("menu").style.width = "250px";
+            var menubtns = document.getElementsByClassName("menu-btn");
+            var i;
+            for (i = 0; i < menubtns.length; i++) {
+                menubtns[i].style.color ="#001f3f";
+            }
+        }
+        function closeNav() {
+            document.getElementById("menu").style.width = "0px";
+            var menubtns = document.getElementsByClassName("menu-btn");
+            var i;
+            for (i = 0; i < menubtns.length; i++) {
+                menubtns[i].style.color ="#ddd";
+            }
+        }
+      </script>
     </body>
   </html>
