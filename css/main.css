@@ -3,15 +3,13 @@
 /* It's pretty nice here */
 
 header {
-  margin: 2%;
+  margin: 1%;
 }
 
 img {
   display: block;
 }
-nav {
-  margin: 0;
-}
+
 .landing {
   margin-top: 15%;
   text-align: center;
@@ -70,8 +68,9 @@ button:hover {
 #close-icon {
   height: 1.5em;
   color: black;
-  position: relative;
-  margin: 5%;
+  position:relative;
+  margin-left: 5%;
+  margin-top: -5%;
 }
 
 #menu {
