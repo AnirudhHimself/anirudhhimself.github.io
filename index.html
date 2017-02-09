@@ -19,14 +19,14 @@
       <header>
         <div class= "flex-container">
           <div class="flex-item">
-            <a><img id="menu-icon" onclick="openNav()" alt="menu" src="assets/menu-icon.svg"/></a>
+            <a><img id="menu-icon" onclick="toggleNav()" alt="menu" src="assets/menu-icon.svg"></a>
           </div>
           <div class="flex-item">
-            <a href=''><img id="setting" alt="settings" src="assets/settings_24px.svg"></a>
+            <a><img id="setting" onclick="toggleNav()" alt="settings" src="assets/settings_24px.svg"></a>
           </div>
         </div>
         <nav id="menu">
-            <a><img id="close-icon" onclick="closeNav()" alt="close" src="assets/close-button.svg"/></a>
+            <br><br><br><br>
             <a class="menu-btn">Danger</a>
             <a class="menu-btn">Stranger</a>
             <a class="menu-btn">Finger</a>
@@ -49,32 +49,38 @@
       <script src="js/Hammer.min.js"></script>
       <script src="js/Hammer-time.min.js"></script>
       <script>
-        function openNav() {
-            document.getElementById("menu").style.width = "250px";
-            document.getElementById("close-icon").style.height="1.25em";
-            document.getElementById("close-icon").style.transition="all 0.5s ease 0s";
+        function toggleNav() {
+          var openNav = function() {
+              document.getElementById("menu").style.width = "250px";
 
-
-            var menubtns = document.getElementsByClassName("menu-btn");
-            var i;
-            for (i = 0; i < menubtns.length; i++) {
-                menubtns[i].style.color ="#001f3f";
-                menubtns[i].style.transition="color 0.34s ease 0s";
-            }
-        }
-        function closeNav() {
-            document.getElementById("menu").style.width = "0px";
-            document.getElementById("close-icon").style.height="0.5em";
-            document.getElementById("close-icon").style.transition="all 0.5s ease 0s";
-
-            var menubtns = document.getElementsByClassName("menu-btn");
-
-            var i;
-            for (i = 0; i < menubtns.length; i++) {
-                menubtns[i].style.color ="#ddd";
-                menubtns[i].style.transition="color 0.34s ease 0s";
-            }
-        }
+              var menubtns = document.getElementsByClassName("menu-btn");
+              var i;
+              for (i = 0; i < menubtns.length; i++) {
+                  menubtns[i].style.color ="#001f3f";
+                  menubtns[i].style.transition="color 0.34s ease 0s";
+              }
+          }
+          var closeNav = function() {
+              document.getElementById("menu").style.width = "0px";
+             
+              var menubtns = document.getElementsByClassName("menu-btn");
+              var i;
+              for (i = 0; i < menubtns.length; i++) {
+                  menubtns[i].style.color ="#ddd";
+                  menubtns[i].style.transition="color 0.34s ease 0s";
+              }
+          }
+          var menu_icon = document.getElementById("menu-icon");
+          console.log(menu_icon.getAttribute("src"));
+          if(menu_icon.getAttribute("src") == "assets/menu-icon.svg") {
+            menu_icon.setAttribute("src", "assets/close-button.svg");
+            console.log("cool");  
+            openNav();
+          } else {
+            menu_icon.setAttribute("src", "assets/menu-icon.svg");
+            closeNav();
+          }    
+        }  
       </script>
     </body>
   </html>
