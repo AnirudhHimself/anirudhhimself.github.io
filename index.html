@@ -26,13 +26,13 @@
         </div>
         <nav id="menu" class="grey-gradient">
             <br><br><br><br>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" role="button">Danger</a>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" role="button">Stranger</a>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" role="button">Finger</a>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" role="button">Linger</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Danger</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Stranger</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Finger</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Linger</a>
         </nav>
       </header>
-      <div class="landing container">
+      <div class="landing container listener">
         <h1>Under Construction :)</h1>
         <button onClick="doNothing()">I'm a happy Button</button>
       </div>
@@ -49,6 +49,7 @@
       <script src="js/Hammer-time.min.js"></script>
       <script>
         function toggleNav() {
+          var bodyElement = document.getElementsByClassName("listener")[0];
           var openNav = function() {
               document.getElementById("menu").style.width = "250px";
 
@@ -58,6 +59,12 @@
                   menubtns[i].style.color ="#001f3f";
                   menubtns[i].style.transition="color 0.34s ease 0s";
               }
+              console.log("Opening Nav");
+              console.log("Adding Event Listner");
+              
+              setTimeout( function() {
+                bodyElement.addEventListener("click", toggleNav);
+              },200);
           }
           var closeNav = function() {
               document.getElementById("menu").style.width = "0px";
@@ -68,12 +75,14 @@
                   menubtns[i].style.color ="#ddd";
                   menubtns[i].style.transition="color 0.34s ease 0s";
               }
+              setTimeout(function() {
+                bodyElement.removeEventListener("click", toggleNav);
+                console.log("Removing Event listener");
+              },200);
           }
           var menu_icon = document.getElementById("menu-icon");
-          console.log(menu_icon.getAttribute("src"));
           if(menu_icon.getAttribute("src") == "assets/menu-icon.svg") {
             menu_icon.setAttribute("src", "assets/close-button.svg");
-            console.log("cool");  
             openNav();
           } else {
             menu_icon.setAttribute("src", "assets/menu-icon.svg");
