@@ -10,25 +10,6 @@ img {
   display: block;
 }
 
-.landing {
-  margin-top: 15%;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-button:hover {
-  background-color: #001f3f;
-  color: white;
-  transition-property: all;
-  transition-duration: 0.54s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-}
-
 #splash {
   width: 100%;
   height: 100%;
@@ -48,14 +29,28 @@ button:hover {
   z-index: 100;
 }
 
+.landing {
+  margin-top: 15%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+button:hover {
+  background-color: #001f3f;
+  color: white;
+  transition-property: all;
+  transition-duration: 0.54s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
 #setting {
   color: #3A3B3C;
-  /* top: 15px;
-  right: 15px */
   transform: rotate(30deg);
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE10+ Booo */
   user-select: none;
   flex: 0 1 auto;
   margin-left: auto;
@@ -90,6 +85,13 @@ button:hover {
     text-align: center;
 }
 
+.grey-gradient {
+    background: -webkit-linear-gradient(90deg, #dee1e1 10%, #f4f4f4 90%); /* Chrome 10+, Saf5.1+ */ 
+    background: -moz-linear-gradient(90deg, #dee1e1 10%, #f4f4f4 90%); /* FF3.6+ */ 
+    background: linear-gradient(90deg, #dee1e1 10%, #f4f4f4 90%); 
+}
+
+
 #menu a {
     padding-top: 10%;
     padding-bottom: 10%;
@@ -102,14 +104,24 @@ button:hover {
     width: 100%;
     background-color: #ddd;
     color: #001f3f;
+    transition: all 0.5s ease 0s;
 }
 
-.menu-btn:hover {
-  background-color: white;
-  color: green;
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
+a.menu-btn:hover {
+    background: -webkit-linear-gradient(90deg, #f857a6 10%, #ff5858 90%); /* Chrome 10+, Saf5.1+ */ 
+    background: -o-linear-gradient(90deg, #f857a6 10%, #ff5858 90%);      /* Opera 11.10+ */ 
+    background: linear-gradient(90deg, #f857a6 10%, #ff5858 90%);         /* one day! */ 
+    
+    /* Another option: color1: #ddd6f3, color2: #faaca8 */
+    /* Another option: color1: #e43a15, color2: #e65245 */
+    /* Another option: color1: #7474BF, color2: #348AC7 */
 }
+
+
+@media screen and (max-width: 480px) {
+  header {
+    margin: 5%;
+  }
+}
+
 
