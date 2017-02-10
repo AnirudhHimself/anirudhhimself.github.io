@@ -18,26 +18,28 @@
       <header>
         <div class= "flex-container">
           <div class="flex-item">
-            <a href="javascript:void(0)" role="button"><img id="menu-icon" onclick="toggleNav()" alt="menu" src="assets/menu-icon.svg"></a>
+            <a href="javascript:void(0)" role="button"><img id="menu-icon" onclick="menuBar.toggleNav()" alt="menu" src="assets/menu-icon.svg"></a>
           </div>
           <div class="flex-item">
-            <a href="javascript:void(0)" role="button"><img id="setting" onclick="toggleNav()" alt="settings" src="assets/settings_24px.svg"></a>
+            <a href="javascript:void(0)" role="button"><img id="setting" onclick="menuBar.toggleNav()" alt="settings" src="assets/settings_24px.svg"></a>
           </div>
         </div>
         <nav id="menu" class="grey-gradient">
             <br><br><br><br>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Danger</a>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Stranger</a>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Finger</a>
-            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="toggleNav()" role="button">Linger</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="menuBar.toggleNav()" role="button">About</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="menuBar.toggleNav()" role="button">Projects</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="menuBar.toggleNav()" role="button">Experiences</a>
+            <a href="javascript:void(0)" class="menu-btn grey-gradient" onclick="menuBar.toggleNav()" role="button">Let's Chat</a>
         </nav>
       </header>
       <div class="landing container listener">
-        <h1>Under Construction :)</h1>
-        <button onClick="doNothing()">I'm a happy Button</button>
+        <h1>Hi, There!</h1>
+        <h2>I'm Anirudh</h2>
+        <h3>and I'm having a good day</h3>
+        <h3>Under Construction :)</h3>
       </div>
       <template>
-        <h1>Hi There! Thanks for looking at the Source Code :-)</h1>
+        <h1>Thanks for looking at the Source Code Hope you have a good day:-)</h1>
       </template>
 
       <!--Importing jQuery and JavaScript -->
@@ -47,53 +49,6 @@
       <script src="js/main.js"></script>
       <script src="js/Hammer.min.js"></script>
       <script src="js/Hammer-time.min.js"></script>
-      <script>
-        function toggleNav() {
-          var bodyElement = document.getElementsByClassName("listener")[0];
-          var openNav = function() {
-              document.getElementById("menu").style.width = "250px";
-
-              var menubtns = document.getElementsByClassName("menu-btn");
-              var i;
-              for (i = 0; i < menubtns.length; i++) {
-                  menubtns[i].style.color ="#001f3f";
-                  menubtns[i].style.transition="color 0.34s ease 0s";
-              }
-
-              document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
-              document.body.style.transition = "all 0.5s ease 0s";
-
-              setTimeout( function() {
-                bodyElement.addEventListener("click", toggleNav);
-              },200);
-          }
-          var closeNav = function() {
-              document.getElementById("menu").style.width = "0px";
-             
-              var menubtns = document.getElementsByClassName("menu-btn");
-              var i;
-              for (i = 0; i < menubtns.length; i++) {
-                  menubtns[i].style.color ="#ddd";
-                  menubtns[i].style.transition="color 0.5s ease 0s";
-              }
-            
-              document.body.style.backgroundColor = "rgba(0,0,0,0)";
-              document.body.style.transition = "all 0.34s ease 0s";
-
-              setTimeout(function() {
-                bodyElement.removeEventListener("click", toggleNav);
-                console.log("Removing Event listener");
-              },200);
-          }
-          var menu_icon = document.getElementById("menu-icon");
-          if(menu_icon.getAttribute("src") == "assets/menu-icon.svg") {
-            menu_icon.setAttribute("src", "assets/close-button.svg");
-            openNav();
-          } else {
-            menu_icon.setAttribute("src", "assets/menu-icon.svg");
-            closeNav();
-          }    
-        }  
-      </script>
+      <script></script>
     </body>
   </html>
