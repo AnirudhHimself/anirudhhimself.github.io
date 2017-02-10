@@ -25,7 +25,7 @@ var menuBar = {
             var i;
             for (i = 0; i < menubtns.length; i++) {
                 menubtns[i].style.color = "#ddd";
-                menubtns[i].style.transition = "color 0.5s ease 0s";
+                menubtns[i].style.transition = "color 0.25s ease 0s";
             }
 
             document.body.style.backgroundColor = "rgba(0,0,0,0)";
